@@ -1,0 +1,104 @@
+SE demo -Project Structure
+
+
+Home page
+		-> This will show all posts of all users
+
+
+Top Menu Bar
+	Home Icon
+		-> When we click on it , it has redirect on the top of the home page.
+
+  	Group Icon 
+		|-> We have to create a friends list when  we click on the group icon on the Top menu.
+		|-> When we click on each friend in the list , it should display the individual details. 
+
+
+Left Menu Bar
+	Profile Icon
+		-> When we click on it , it has show the profile of the current user
+
+  	allPosts Icon 
+		|-> Show the posts written by current user.	
+	Events Icon
+		|-> It will show all the details about the  events of the current user.
+
+  Posting
+	-> User can posts/write on the home page.
+	->  User can read the posts.
+	-> User can comment on posts.
+
+Project Structure
+
+	|-> Model Clases
+
+		-> Posting    ( -> read 
+			     		-> write
+			     		-> comment Optional
+					)
+		-> left menu ( -> Profile 
+			        	-> All posts 
+			        	-> Events
+					)
+
+		-> Top menu ( -> home,
+				 	-> Friends
+					)
+One-To-Many Association
+	|-> ( User - Friend
+			  - Post 
+	       )
+	
+
+
+
+Buttons - 
+   Home
+	|-> Create Posts buttons
+
+	|-> Edit Posts buttons
+	|-> Delete Posts buttons
+
+      Left menu bar
+	|-> Profile icon
+	|-> Events icon
+	|-> All Current User Posts icon
+
+      Top menu bar
+	|-> home icon
+	|-> friends Group icon
+
+
+   Database
+
+	1.TMBar
+  	->Friend (list)
+		* Friend_name : “Text_attribute”
+			|-> Friend Individual details
+				* Friend_name : “Text_attribute”
+				*Friend_DOB : integer_attribute
+				*email_id 	: “Text_attribute”
+	2.LMBar
+		|->Profile
+			*Current_user_name : “text_attribute”
+			*Current_user_DOB : integer_attribute
+			*Current_user_email-id: “text-attribute”
+			*Current_user_image: image
+		|->Posts
+			*Tile : “Text_attribute”
+			* description : “Text_attribute”
+		|->Events
+			Display - “No current Events”
+
+	3.Home_timeline
+		|->Posts
+			*Tile : “Text_attribute”
+			* description : “Text_attribute”
+
+		
+		
+
+
+
+
+
