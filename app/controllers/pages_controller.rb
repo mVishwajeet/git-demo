@@ -19,4 +19,20 @@ class PagesController < ApplicationController
             render :new
         end
     end
+
+   
+#Left Menu Bar
+    def myprofile
+        render :myprofile
+    end
+
+    def mypost
+        @posts = Post.all
+        render :mypost
+    end
+
+    def myevent
+        render :myevent
+    end
+
 end
