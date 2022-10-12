@@ -1,9 +1,13 @@
-<h1>This is home Page</h1>
-
 
 <div class="myDiv">
-    <% @posts.each do |p|%>
-         <p><%=p.title%></p>
-         <p class="pl"><%=p.description%></p>
-    <% end%>
+<div class="heading-text">
+    <h1>Facebook home Page</h1>
+</div>
+    <div class="pdiv">
+        <% @posts.each do |p|%>
+             <p><%=p.title%></p>
+            <p class="pl"><%=p.description%></p>
+        <% end%>
+    </div>
 <div>
+
