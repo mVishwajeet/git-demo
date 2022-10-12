@@ -11,8 +11,13 @@
   </head>
 
   <body>
-  
      <main>
+     <% flash.each do |key, message| %>
+    <div class="alert <%= flash_class(key) %> alert-dismissible fade show" role="alert">
+       <div class="text-center alert-message"><%= message %></div>
+       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  <% end %>
      <div class="top-nav" role="navigation">
         <%= link_to 'Home Icon', home_path %>
         <%= link_to 'Group Icon', home_path %>

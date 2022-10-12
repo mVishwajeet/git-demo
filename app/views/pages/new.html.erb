@@ -1,0 +1,12 @@
+<div class="heading-text">
+    <h1>Create new post</h1>
+</div >
+<div class="pdiv">
+<%= bootstrap_form_with model: @post, url: home_path, method: :post, data: { turbo: false } do |f| %>
+  <%= f.text_field :title %>
+  <%= f.text_area :description %>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to 'Cancel', home_path %>
+</div>
