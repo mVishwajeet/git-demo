@@ -20,6 +20,13 @@ class PagesController < ApplicationController
         end
     end
 
+    def delete
+        @p = Post.find(params[:id])
+        @p.destroy
+        flash[:success]= "Post is Successfully deleted"
+        redirect_to home_url
+    end
+
    
 #Left Menu Bar
     def myprofile

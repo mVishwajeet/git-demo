@@ -5,11 +5,12 @@
     </div>
 
     <div class="heading-text"> <%= link_to 'Create New Post', new_path %></div>
-    
+
     <div class="pdiv">
         <% @posts.each do |p|%>
              <p><%=p.title%></p>
-            <p class="pl"><%=p.description%></p>
+             <p class="pl"><%=p.description%></p>
+             <%= button_to "Delete", delete_path(p), method: :delete, data:{turbo: false}%> 
         <% end%>
     </div>
 <div>
